@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<section>
+    <div class="row">
+        <div class="large-8 large-push-4 small-12 columns video">
+            <div class="flex-video">
+                <object width="425" height="340">
+                    <param name="movie" value="http://www.youtube.com/v/ncuD6YEJreE"></param>
+                    <embed src="http://www.youtube.com/v/ncuD6YEJreE" type="application/x-shockwave-flash" width="425" height="340"></embed>
+                </object>
+            </div>
+            <p>See our reward winning tv spot!</p>
+        </div>
+        <div class="large-4 large-pull-8 small-12 columns">
+            <div class="panel form">
+                <h2>Sign-up today!</h2>
+                <form id="signup" v-on:submit="handle">
+                    <input name="validate" type="hidden" v-model="form.validate">
+                    <label for="email" :class="{'error': errors.has('email')}">Email</label>
+                    <input name="email" type="text" id="email" v-model="form.email" :class="{'error': errors.has('email')}">
+                    <small class="error" v-show="errors.has('email')">{% raw %}{{ errors.get('email') }}{% endraw %}</small>
+
+                    <label for="name" :class="{'error': errors.has('name')}">Name</label>
+                    <input name="name" type="text" id="name" v-model="form.name" :class="{'error': errors.has('name')}">
+                    <small class="error" v-show="errors.has('name')">{% raw %}{{ errors.get('name') }}{% endraw %}</small>
+
+                    <label for="degree" :class="{'error': errors.has('degree')}">Degree</label>
+                    <select id="degree" name="degree" v-model="form.degree" :class="{'error': errors.has('degree')}">
+                        <option value="" selected="selected">Select degree</option>
+                        <option value="Batchelors">Bachelors</option>
+                        <option value="Masters">Masters</option>
+                        <option value="PhD">PhD</option>
+                        <option value="Legal">Legal</option>
+                        <option value="Medical">Medical</option>
+                        <option value="Hazmat">Hazmat</option>
+                    </select>
+                    <small class="error" v-show="errors.has('degree')">{% raw %}{{ errors.get('degree') }}{% endraw %}</small>
+                    <input class="button success radius" type="submit" value="Earn loads of money">
+                </form>
+            </div>
+            <img src="http://static.bigrichonline.biz.s3.amazonaws.com/img/expedite.jpg" alt="Expedite your life with Big Rich's Big Riches Plan" />
+        </div>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+# Site settings
+title: Expedite Your Life! with Big Rich's Big Riches Plan
+email: savehowiemandel@gmail.com
+description: >
+  I'm your buddy, Big Rich. I'll help you earn big riches. Fill out a simple form and you're on your way
+  to a certified degree and diploma.
+baseurl: ""
+url: "http://www.bigrichonline.biz"
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
