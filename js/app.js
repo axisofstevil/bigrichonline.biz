@@ -55,7 +55,7 @@
                 event.preventDefault();
                 this.isSuccess = false;
                 this.errors.forget();
-                this.$http.post('http://localhost:8000/api/properties/c9c3c508-a9e5-428d-9099-6bff7f1e147d/snapshots', this.form)
+                this.$http.post('http://collector.stevil.co/api/properties/c9c3c508-a9e5-428d-9099-6bff7f1e147d/snapshots', this.form)
                     .then(function (response) {
                         self.isSuccess = true;
                     }, function(err) {
